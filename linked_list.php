@@ -25,8 +25,24 @@
         return false;
       }
     }
+
+    public function addNode($node) {
+      if($this->isEmpty()) {
+        $this->head = $node;
+      } else {
+        $currentNode = $this->head;
+        while($currentNode != null) {
+          $currentNode = $currentNode->nextNode;
+        }
+        $currentNode->nextNode = $node;
+      }
+    }
+
   }
 
   $a = new linkedList();
   echo $a->isEmpty();
+  $node1 = new node("bob");
+  $a->addNode($node1);
+  echo $a->head->data;
 ?>
