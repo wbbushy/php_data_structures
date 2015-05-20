@@ -18,7 +18,15 @@
       $this->head = null;
     }
 
-
-
+    public function isEmpty() {
+      if($head == null) {
+        return true;
+      } else {
+        return false;
+      }
+    }
   }
+
+  $a = new linkedList();
+  echo $a->isEmpty();
 ?>
